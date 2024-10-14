@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>MolleFest</title>
+
+            <!-- Link style de Bootstrap -->
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+                <link rel="stylesheet" href="./css/style.css">
+            <!-- / -->
+
+            <!-- Estilos -->
+                <style>
+
+                    .carousel-inner img{
+                        height: 669px;
+                        width: auto;
+                        object-fit: contain; /* Mantiene la proporción de la imagen sin deformar */
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto; /* Centra la imagen si no cubre todo el ancho */
+                    }
+
+                    .carousel-control-prev-icon,
+                    .carousel-control-next-icon {
+                        background-color: rgba(0, 0, 0, 0.5); /* Cambia el color de fondo de las flechas */
+                        border-radius: 0%; /* Redondea las esquinas */
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    /* Estilos para el modo claro */
+                    .text-light-mode {
+                        color: #6c757d; /* Color de texto predeterminado para el modo claro */
+                    }
+
+                    /* Estilos para el modo oscuro */
+                    .text-dark-mode {
+                        color: #e0e0e0; /* Color de texto más claro para que se vea bien en fondo oscuro */
+                    }
+
+                    /* Estilos para el modo claro del pie de página */
+                    .footer-light {
+                        color: #000; /* Color negro para el pie de página en modo claro */
+                    }
+
+                    /* Estilos para el modo oscuro del pie de página */
+                    .footer-dark {
+                        color: #e0e0e0; /* Color claro para el pie de página en modo oscuro */
+                    }
+
+                </style>
+            <!---->
+    </head>
+
+    <body>
+         
+        <!-- Encabezado-->
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                <div class="col-md-3 mb-2 mb-md-0">
+                <a href="#" class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <img src="./img/schnauzer_silueta.jpg" alt="schnauzer_silueta" height="50px">
+                </a>
+                </div>
+        
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+                <li><a href="#" class="nav-link px-2">Features</a></li>
+                <li><a href="#" class="nav-link px-2">Pricing</a></li>
+                <li><a href="#" class="nav-link px-2">FAQs</a></li>
+                <li><a href="#" class="nav-link px-2">About</a></li>
+                </ul>
+        
+                <div class="col-md-3 text-end">
+                    <!-- Dropdown para seleccionar Light o Dark -->
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Light
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="themeDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="setTheme('light')">Light</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="setTheme('dark')">Dark</a></li>
+                        </ul>
+                    </div>            
+                </div>
+
+            </header>
+        <!-- / -->
+        
+        <!-- Contenedor centralizado -->
+        <div class="container">
+
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                  <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Molle Fest 2024</h1>
+                    <p class="lead text-light-mode">Un evento exclusivo donde las mentes más creativas y talentosas se reúnen para compartir experiencias inolvidables</p>
+                    <p>
+                      <a href="#" class="btn btn-primary my-2">Registrarse</a>
+                      <a href="#" class="btn btn-secondary my-2">Soporte</a>
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+            <div class="row">
+                <div class="col-lg-4">
+                  <img src="./img/diversion_canina.jpg" alt="Heading 1" class="rounded-circle mb-3" style="width: 140px; height: 140px;">
+                  <h2 class="fw-normal">¡Diversión Canina!</h2>
+                  <p>Prepárate para una tarde llena de juegos y entretenimiento con Molle ¡Corre, juega y diviértete como nunca!</p>
+                  <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="./img/snacks.jpg" alt="Heading 1" class="rounded-circle mb-3" style="width: 140px; height: 140px;">
+                  <h2 class="fw-normal">Snacks y Delicias</h2>
+                  <p>Un festín especialmente diseñado para el gran Molle. Deliciosos snacks para mantener la energía durante todo el evento.</p>
+                  <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="./img/selfies.jpg" alt="Heading 1" class="rounded-circle mb-3" style="width: 140px; height: 140px;">
+                  <h2 class="fw-normal">Sesión de Fotos</h2>
+                  <p>¡No te vayas sin tu foto! Disfruta de una sesión fotográfica con Molle para capturar momentos únicos y adorables de esta edición especial.</p>
+                  <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                </div><!-- /.col-lg-4 -->
+              </div>
+
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./img/Molle1.jpg" class="d-block w-100" alt="Molle1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/Molle2.jpeg" class="d-block w-100" alt="Molle2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/Molle3.jpeg" class="d-block w-100" alt="Molle3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+            <!-- Pie de página-->
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <img src="./img/schnauzer_silueta.jpg" alt="schnauzer_silueta" width="50px" height="50px">
+                    <!-- Añadir una clase fija footer-text que cambiamos dinámicamente -->
+                    <span class="mb-3 mb-md-0 footer-text footer-light">© 2024 MolleFest</span>
+                </div>
+            
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><img src="./svg/twitter-x.svg" alt="twitter-x" width="24px" height="24px"></li>
+                    <li class="ms-3"><img src="./svg/instagram.svg" alt="instagram" width="24px" height="24px"></li>
+                    <li class="ms-3"><img src="./svg/facebook.svg" alt="facebook" width="24px" height="24px"></li>
+                </ul>
+            </footer>
+            <!-- / -->
+        </div>
+        <!-- / -->
+
+        <!-- Script para cambiar el tema (ejemplo básico) -->
+        <script>
+            function setTheme(theme) {
+                const body = document.body;
+                const textElements = document.querySelectorAll('.text-light-mode');
+                const footerText = document.querySelector('.footer-text'); // Seleccionamos la clase base footer-text
+
+                if (theme === 'dark') {
+                    body.style.backgroundColor = '#333';
+                    body.style.color = '#fff';
+                    document.getElementById('themeDropdown').textContent = 'Dark';
+
+                    // Cambia los textos a modo oscuro
+                    textElements.forEach(el => el.classList.add('text-dark-mode'));
+
+                    // Cambia el pie de página a modo oscuro
+                    footerText.classList.remove('footer-light');
+                    footerText.classList.add('footer-dark');
+
+                } else {
+                    body.style.backgroundColor = '#fff';
+                    body.style.color = '#000';
+                    document.getElementById('themeDropdown').textContent = 'Light';
+
+                    // Restaura los textos a modo claro
+                    textElements.forEach(el => el.classList.remove('text-dark-mode'));
+
+                    // Cambia el pie de página a modo claro
+                    footerText.classList.remove('footer-dark');
+                    footerText.classList.add('footer-light');
+                }
+            }
+        </script>
+        <!-- / -->
+        
+        <!-- Scripts de Bootstrap -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- / -->
+
+    </body>
+
+</html>
